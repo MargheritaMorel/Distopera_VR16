@@ -19,8 +19,10 @@ public class Button3D : MonoBehaviour
 
     private MeshRenderer renderer;
     private bool isPressed = false;
+    private bool isOpened = false;
     private float initialLocalYPos;
     public UnityEvent evento;
+    public UnityEvent evento1;
 
 
     void Start ()
@@ -52,7 +54,17 @@ public class Button3D : MonoBehaviour
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() => 
         {
-            evento.Invoke();
+            if (!isOpened)
+            {
+                evento.Invoke();
+                isOpened = true;
+            }
+            else
+            {
+                evento1.Invoke();
+                isOpened = false;
+            }
+            
 
             isPressed = false;
             if (renderer != null)

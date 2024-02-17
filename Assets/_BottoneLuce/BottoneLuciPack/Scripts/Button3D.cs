@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 using System;
 
 public class Button3D : MonoBehaviour
@@ -19,8 +20,9 @@ public class Button3D : MonoBehaviour
     private MeshRenderer renderer;
     private bool isPressed = false;
     private float initialLocalYPos;
+    public UnityEvent evento;
 
- 
+
     void Start ()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
@@ -50,6 +52,8 @@ public class Button3D : MonoBehaviour
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() => 
         {
+            evento.Invoke();
+
             isPressed = false;
             if (renderer != null)
                 renderer.material.color = unpressedColor;

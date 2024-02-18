@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -484,6 +484,7 @@ GameObject:
   m_Component:
   - component: {fileID: 672042227}
   - component: {fileID: 672042228}
+  - component: {fileID: 672042229}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -518,8 +519,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55171e6d859652343b0acdc21ac07332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WriteText:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   nameText: {fileID: 1883576653}
   dialogueText: {fileID: 886266816}
+--- !u!114 &672042229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672042226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55171e6d859652343b0acdc21ac07332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WriteText:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  nameText: {fileID: 0}
+  dialogueText: {fileID: 0}
 --- !u!1 &696869460
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +964,7 @@ GameObject:
   - component: {fileID: 888982290}
   - component: {fileID: 888982289}
   - component: {fileID: 888982288}
+  - component: {fileID: 888982292}
   m_Layer: 5
   m_Name: StartDButton
   m_TagString: Untagged
@@ -1037,6 +1067,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 888982292}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &888982290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1075,6 +1117,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888982286}
   m_CullTransparentMesh: 1
+--- !u!114 &888982292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888982286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 625676518
+      Data2: 1110042177
+      Data3: -1855745893
+      Data4: -284220959
+    Path: event:/Menu_Select_SFX
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1143322557
 GameObject:
   m_ObjectHideFlags: 0

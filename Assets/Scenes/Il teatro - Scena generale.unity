@@ -23563,7 +23563,7 @@ PrefabInstance:
       addedObject: {fileID: 1892983069}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6426f4292de691744898fce2c8a701e0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1892983068}
+      addedObject: {fileID: 1892983070}
   m_SourcePrefab: {fileID: 100100000, guid: 6426f4292de691744898fce2c8a701e0, type: 3}
 --- !u!4 &1892983066 stripped
 Transform:
@@ -23575,33 +23575,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6426f4292de691744898fce2c8a701e0, type: 3}
   m_PrefabInstance: {fileID: 1892983065}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1892983068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892983067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f92151edbd380c94598d27a82b1426c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  evento:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
-        m_MethodName: GoToScene
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: StanzaIniziale
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!95 &1892983069
 Animator:
   serializedVersion: 5
@@ -23623,6 +23596,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1892983070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892983067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92151edbd380c94598d27a82b1426c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evento:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1915052061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 642ba09d9d0bc4a538aca3babedb2cf7, type: 3}
@@ -24076,6 +24076,21 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: SiparioInterfaccia
+          m_BoolArgument: 0
+        m_CallState: 2
+  evento1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1892983069}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SiparioInterfacciaChiusura
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1971277303

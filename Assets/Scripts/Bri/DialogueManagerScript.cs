@@ -4,9 +4,12 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
+
 
 public class DialogueManagerScript : MonoBehaviour
 {
+    [SerializeField] private EventReference WriteText;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
@@ -42,6 +45,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
+            AudioManager.instance.PlayOneShot(WriteText, this.transform.position);
             yield return new WaitForSeconds(0.05f);
         }
     }

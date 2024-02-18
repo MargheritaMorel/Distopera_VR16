@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 using System;
-
-public class Button3D : MonoBehaviour
+public class Pulsante : MonoBehaviour
 {
     public Action OnButtonPressed;
 
@@ -20,10 +20,11 @@ public class Button3D : MonoBehaviour
     private bool isPressed = false;
     private bool isOpened = false;
     private float initialLocalYPos;
-   
+    public UnityEvent evento;
+    public UnityEvent evento1;
 
 
-    void Start ()
+    void Start()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
 
@@ -43,17 +44,27 @@ public class Button3D : MonoBehaviour
             renderer.material.color = pressedColor;
 
         Sequence pressSequence = DOTween.Sequence();
-        pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() => 
+        pressSequence.Append(movingPieceT.DOLocalMoveY(localYFinalPressedPos, pressDuration).OnComplete(() =>
         {
             //When Button has reached the end of travel rise event
             if (OnButtonPressed != null)
                 OnButtonPressed();
         }));
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
-        pressSequence.OnComplete(() => 
+        pressSequence.OnComplete(() =>
         {
-            
-           
+            if (!isOpened)
+            {
+                evento.Invoke();
+                isOpened = true;
+            }
+            else
+            {
+                evento1.Invoke();
+                isOpened = false;
+            }
+
+
             isPressed = false;
             if (renderer != null)
                 renderer.material.color = unpressedColor;

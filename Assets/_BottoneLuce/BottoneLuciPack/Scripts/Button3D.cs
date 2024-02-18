@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 using System;
 
 public class Button3D : MonoBehaviour
@@ -18,9 +19,12 @@ public class Button3D : MonoBehaviour
 
     private MeshRenderer renderer;
     private bool isPressed = false;
+    private bool isOpened = false;
     private float initialLocalYPos;
+    public UnityEvent evento;
+    public UnityEvent evento1;
 
- 
+
     void Start ()
     {
         initialLocalYPos = movingPieceT.localPosition.y;
@@ -50,6 +54,18 @@ public class Button3D : MonoBehaviour
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() => 
         {
+            if (!isOpened)
+            {
+                evento.Invoke();
+                isOpened = true;
+            }
+            else
+            {
+                evento1.Invoke();
+                isOpened = false;
+            }
+            
+
             isPressed = false;
             if (renderer != null)
                 renderer.material.color = unpressedColor;

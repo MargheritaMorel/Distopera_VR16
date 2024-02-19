@@ -385,6 +385,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1447332383}
     m_Modifications:
+    - target: {fileID: 3036154050439053269, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3534046100949335923, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
       propertyPath: m_Name
       value: LuceFaretto
@@ -18036,6 +18040,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1867484594}
     m_Modifications:
+    - target: {fileID: 3036154050439053269, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3534046100949335923, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
       propertyPath: m_Name
       value: LuceFaretto
@@ -25081,13 +25089,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1946211718}
     m_Modifications:
+    - target: {fileID: 3036154050439053269, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3534046100949335923, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
       propertyPath: m_Name
       value: LuceFaretto
       objectReference: {fileID: 0}
     - target: {fileID: 3534046100949335923, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7828021091428917497, guid: 70f2d4f7e3e657b408a2ee7859f2ae76, type: 3}
       propertyPath: m_LocalPosition.x

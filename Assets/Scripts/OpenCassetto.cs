@@ -18,7 +18,8 @@ public class OpenCassetto : Interactable
 
     private void OnMouseDown()
     {
-        Invoke("RunCoroutine", 0f);
+        if (Input.GetButtonDown("g"))
+            Invoke("RunCoroutine", 0f);
     }
 
     private void RunCoroutine()

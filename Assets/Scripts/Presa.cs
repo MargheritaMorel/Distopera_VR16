@@ -8,7 +8,7 @@ using System;
 public class Presa : MonoBehaviour
 {
     public Action OnButtonPressed;
-    [SerializeField] private GameObject _faro;
+
     private bool isClicked = false;
   
     public UnityEvent evento;
@@ -17,7 +17,7 @@ public class Presa : MonoBehaviour
 
     void Start()
     {
-        
+       
 
     }
 
@@ -28,14 +28,12 @@ public class Presa : MonoBehaviour
             {
                 evento.Invoke();
                 isClicked = true;
-             _faro.SetActive(true);
-        }
+            }
             else
             {
                 evento1.Invoke();
                 isClicked = false;
-            _faro.SetActive(false);
-        }
+            }
 
 
            

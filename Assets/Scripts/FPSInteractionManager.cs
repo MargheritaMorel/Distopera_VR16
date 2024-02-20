@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
+using System.Collections;
 
 public class FPSInteractionManager : MonoBehaviour
 {
@@ -18,8 +18,6 @@ public class FPSInteractionManager : MonoBehaviour
 
     private Grabbable _grabbedObject = null;
 
-    [SerializeField] private List<SnapPoint> snapPoints;
-    [SerializeField] private float snapRange = 2f;
 
     void Start()
     {
@@ -93,12 +91,6 @@ public class FPSInteractionManager : MonoBehaviour
             return;
 
         _grabbedObject.transform.parent = _grabbedObject.OriginalParent;
-
-        //controllo se oggetto grabbato è un oggetto che va sul palco , magari con tag "oggettoPalco"
-        if (_grabbedObject.tag == "OggettoScena")
-        {
-            DropOggettoInScena(_grabbedObject);
-        }
         _grabbedObject.Drop();
 
         _target.enabled = true;
@@ -116,41 +108,5 @@ public class FPSInteractionManager : MonoBehaviour
     private void DebugRaycast()
     {
         Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
-    }
-
-    //si può pensare di portare fuori questa funzione dall FPS controller
-    private void DropOggettoInScena(Grabbable grabbable)
-    {
-        float closestDistance = -1;
-        SnapPoint closestSnapPoint = null;
-
-        //magari ci possono essere 4 posizioni prestabilite sul palco, quindi cerco quello più vicino al blocco
-        foreach (SnapPoint snapPoint in snapPoints)
-        {
-            if (!snapPoint.isUsed)
-            {
-                float currentDistance = Vector3.Distance(grabbable.transform.localPosition, snapPoint.transform.localPosition);
-
-                if (closestSnapPoint == null || currentDistance < closestDistance)
-                {
-                    closestSnapPoint = snapPoint;
-                    closestDistance = currentDistance;
-                }
-            }
-        }
-
-        //snapRange è il valore entro il quale il drop risulta "corretto"
-        if (closestSnapPoint != null && closestDistance <= snapRange)
-        {
-            grabbable.transform.localPosition = closestSnapPoint.transform.localPosition;
-            grabbable.Drop();
-            closestSnapPoint.gameObject.SetActive(false);
-
-        }
-        else
-        {
-            grabbable.Drop();
-
-        }
     }
 }

@@ -20,6 +20,7 @@ public class FPSInteractionManager : MonoBehaviour
 
     [SerializeField] private List<SnapPoint> snapPoints;
     [SerializeField] private float snapRange = 2f;
+    private OggettoScena _oggettoScena = null;
 
     void Start()
     {
@@ -59,12 +60,17 @@ public class FPSInteractionManager : MonoBehaviour
 
             //Check if is grabbable
             _pointingGrabbable = hit.transform.GetComponent<Grabbable>();
+            _oggettoScena = hit.transform.GetComponent<OggettoScena>();
+
             if (_grabbedObject == null && _pointingGrabbable)
             {
                 if (Input.GetMouseButtonDown(1))
                 {
                     _pointingGrabbable.Grab(gameObject);
-                    Grab(_pointingGrabbable);
+                    if (_pointingGrabbable.tag == "OggettoScena")
+                        GrabOggettoScena(_pointingGrabbable, _oggettoScena);
+                    else
+                        Grab(_pointingGrabbable);
                 }
                     
             }
@@ -97,7 +103,7 @@ public class FPSInteractionManager : MonoBehaviour
         //controllo se oggetto grabbato è un oggetto che va sul palco , magari con tag "oggettoPalco"
         if (_grabbedObject.tag == "OggettoScena")
         {
-            DropOggettoInScena(_grabbedObject);
+            DropOggettoInScena(_grabbedObject, _oggettoScena);
         }
         _grabbedObject.Drop();
 
@@ -118,8 +124,23 @@ public class FPSInteractionManager : MonoBehaviour
         Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
     }
 
+    private void GrabOggettoScena(Grabbable grabbable, OggettoScena oggetto)
+    {
+        if (oggetto._isPlaced == true)
+        {
+            if (oggetto._snappoint.isUsed == true)
+            {
+                oggetto._snappoint.isUsed = false;
+                oggetto._snappoint.gameObject.SetActive(true);
+                oggetto._snappoint = null;
+            }
+            oggetto._isPlaced = false;
+        }
+        Grab(grabbable);
+    }
+
     //si può pensare di portare fuori questa funzione dall FPS controller
-    private void DropOggettoInScena(Grabbable grabbable)
+    private void DropOggettoInScena(Grabbable grabbable, OggettoScena oggetto)
     {
         float closestDistance = -1;
         SnapPoint closestSnapPoint = null;
@@ -143,14 +164,12 @@ public class FPSInteractionManager : MonoBehaviour
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
             grabbable.transform.localPosition = closestSnapPoint.transform.localPosition;
-            grabbable.Drop();
+            oggetto._isPlaced = true;
+            oggetto._snappoint = closestSnapPoint;
+            oggetto._snappoint.isUsed = true;
             closestSnapPoint.gameObject.SetActive(false);
 
         }
-        else
-        {
             grabbable.Drop();
-
-        }
     }
 }

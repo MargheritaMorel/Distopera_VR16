@@ -4,15 +4,16 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using FMODUnity;
+using UnityEngine.UIElements;
 
 
 public class DialogueManagerScript : MonoBehaviour
 {
-    [SerializeField] private EventReference WriteText;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
+
 
     void Start(){
         sentences = new Queue<string>();
@@ -32,6 +33,7 @@ public class DialogueManagerScript : MonoBehaviour
     }
 
     public void DisplayNextSentence(){
+    
         if(sentences.Count == 0){
             EndDialogue();
             return;
@@ -45,7 +47,6 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueText.text = "";
         foreach (char letter in sentence.ToCharArray()){
             dialogueText.text += letter;
-            AudioManager.instance.PlayOneShot(WriteText, this.transform.position);
             yield return new WaitForSeconds(0.05f);
         }
     }

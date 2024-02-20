@@ -18,9 +18,7 @@ public class OpenCassetto : Interactable
 
     private void OnMouseDown()
     {
-        //modificato gli input in input manager
-        if (Input.GetButtonDown("g"))
-            Invoke("RunCoroutine", 0f);
+        Invoke("RunCoroutine", 0f);
     }
 
     private void RunCoroutine()

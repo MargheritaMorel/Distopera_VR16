@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3808,7 +3808,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turnLightButton: {fileID: 215239974}
   _faro: {fileID: 344498790}
-  LightSwitchSound: {fileID: 636233130}
+  LightSwitchSound: {fileID: 1966100389}
 --- !u!1 &220179390 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -796861937133395360, guid: e46f99e9e7235df478a71a24e40406fe, type: 3}
@@ -10389,7 +10389,7 @@ MonoBehaviour:
           m_StringArgument: presaon
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -10416,7 +10416,7 @@ MonoBehaviour:
           m_StringArgument: presaoff
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -16883,7 +16883,7 @@ MonoBehaviour:
           m_StringArgument: presaon
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -16910,7 +16910,7 @@ MonoBehaviour:
           m_StringArgument: presaoff
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -21000,7 +21000,7 @@ MonoBehaviour:
           m_StringArgument: presaon
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -21027,7 +21027,7 @@ MonoBehaviour:
           m_StringArgument: presaoff
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -22704,11 +22704,10 @@ Transform:
   - {fileID: 1181195715}
   - {fileID: 1107983645}
   - {fileID: 129373117}
-  - {fileID: 636233129}
-  - {fileID: 1255141109}
   - {fileID: 1662568455}
   - {fileID: 1871315916}
   - {fileID: 448225150}
+  - {fileID: 1966100388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &984193868
@@ -23539,7 +23538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turnLightButton: {fileID: 1027241801}
   _faro: {fileID: 539931847}
-  LightSwitchSound: {fileID: 636233130}
+  LightSwitchSound: {fileID: 1966100389}
 --- !u!114 &1028774562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32528,6 +32527,18 @@ MonoBehaviour:
           m_StringArgument: presaon
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1966100389}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: presaon
+          m_BoolArgument: 0
+        m_CallState: 2
   evento1:
     m_PersistentCalls:
       m_Calls:
@@ -32535,6 +32546,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: Play
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: presaoff
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1966100389}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -42940,6 +42963,134 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960247295}
   m_Mesh: {fileID: -448447545319425015, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+--- !u!1 &1966100387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1966100388}
+  - component: {fileID: 1966100389}
+  m_Layer: 0
+  m_Name: AudioSource_Light_Switch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1966100388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966100387}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 980287427}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1966100389
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966100387}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 15f6c92770af049de9fcf77fc8075874, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1971277298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43125,7 +43276,7 @@ MonoBehaviour:
           m_StringArgument: SiparioInterfaccia
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1255141110}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -44568,7 +44719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _turnLightButton: {fileID: 2028765957}
   _faro: {fileID: 698783211}
-  LightSwitchSound: {fileID: 636233130}
+  LightSwitchSound: {fileID: 1966100389}
 --- !u!1 &2028967296
 GameObject:
   m_ObjectHideFlags: 0
@@ -45612,7 +45763,7 @@ MonoBehaviour:
           m_StringArgument: presaon
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -45639,7 +45790,7 @@ MonoBehaviour:
           m_StringArgument: presaoff
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 636233130}
+      - m_Target: {fileID: 1966100389}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -47037,3 +47188,4 @@ SceneRoots:
   - {fileID: 207579502}
   - {fileID: 528539968}
   - {fileID: 980287427}
+  - {fileID: 1599228086}

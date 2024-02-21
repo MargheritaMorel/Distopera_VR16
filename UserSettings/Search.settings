@@ -8,9 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.310DEAF1" = "stats"
+	"last_search.310DEAF1" = "audio"
 	"OpenInspectorPreview.310DEAF1" = "0"
-	"currentGroup.310DEAF1" = "all"
+	"currentGroup.310DEAF1" = "settings"
 }
 providers = {
 	packages = {
@@ -56,6 +56,26 @@ providers = {
 	scene = {
 		active = true
 		priority = 50
+		defaultAction = null
+	}
+	menu = {
+		active = true
+		priority = 80
+		defaultAction = null
+	}
+	settings = {
+		active = true
+		priority = 100
+		defaultAction = null
+	}
+	calculator = {
+		active = true
+		priority = 10
+		defaultAction = null
+	}
+	static_methods = {
+		active = true
+		priority = 85
 		defaultAction = null
 	}
 }

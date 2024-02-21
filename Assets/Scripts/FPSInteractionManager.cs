@@ -166,7 +166,7 @@ public class FPSInteractionManager : MonoBehaviour
         {
             if (!snapPoint.isUsed)
             {
-                float currentDistance = Vector3.Distance(grabbable.transform.localPosition, snapPoint.transform.localPosition);
+                float currentDistance = Vector3.Distance(grabbable.transform.position, snapPoint.transform.position);
 
                 if (closestSnapPoint == null || currentDistance < closestDistance)
                 {
@@ -179,7 +179,7 @@ public class FPSInteractionManager : MonoBehaviour
         //snapRange è il valore entro il quale il drop risulta "corretto"
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
-            grabbable.transform.localPosition = closestSnapPoint.transform.localPosition;
+            grabbable.transform.position = closestSnapPoint.transform.position;
             oggetto._isPlaced = true;
             oggetto._snappoint = closestSnapPoint;
             oggetto._snappoint.isUsed = true;

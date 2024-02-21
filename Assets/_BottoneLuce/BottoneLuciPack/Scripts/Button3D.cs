@@ -52,7 +52,6 @@ public class Button3D : MonoBehaviour
         pressSequence.Append(movingPieceT.DOLocalMoveY(initialLocalYPos, releaseDuration));
         pressSequence.OnComplete(() => 
         {
-            
            
             isPressed = false;
             if (renderer != null)

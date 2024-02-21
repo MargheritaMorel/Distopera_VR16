@@ -8,7 +8,7 @@ public class SceneLoader : MonoBehaviour
     public enum Scene
     {
         Menu,
-        Game
+        Theatre
     }
 
     // Start is called before the first frame update
@@ -19,9 +19,9 @@ public class SceneLoader : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene("Loading");
-        }
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     SceneManager.LoadScene("Loading");
+        // }
     }
 }

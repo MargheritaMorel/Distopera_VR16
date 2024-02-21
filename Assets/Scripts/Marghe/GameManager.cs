@@ -45,10 +45,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(currentScene == SceneLoader.Scene.Menu)
         {
-            StartCoroutine(LoadScene("Theatre"));
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                StartCoroutine(LoadScene("Theatre"));
+                currentScene = SceneLoader.Scene.Theatre;
+            }
         }
+
 
 
         // //Carica la scena del menu  all'avvio del gioco

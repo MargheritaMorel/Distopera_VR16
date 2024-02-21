@@ -20,27 +20,4 @@ public class SnapPoint : MonoBehaviour
     {
 
     }
-
-    public void DisabilitaSnap()
-    {   //è usato
-        _snapPoint.SetActive(false);
-        isUsed = true;
-    }
-
-    public void AbilitaSnap()
-    {
-        //non è più usato, quindi posso riusarlo
-        _snapPoint.SetActive(true);
-        isUsed = false;
-    }
-
-    public void Pieno()
-    {   //ci sta un oggetto
-        isPlaced = true;
-    }
-
-    public void Vuoto()
-    {
-        isPlaced = false;
-    }
 }

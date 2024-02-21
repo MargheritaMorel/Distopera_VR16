@@ -1562,11 +1562,11 @@ MonoBehaviour:
     sentences:
     - 'Ecco il nuovo direttore artistico!
 
-      Mi presento, sono  l''Attore 2...'
+      Mi presento, sono uno dei protagonisti
+      dello spettacolo...'
     - 'Siamo quasi pronti per andare in scena.
 
-      Io interpeto un personaggio
-      **descrizione**..'
+      Io interpeto Dan...'
     - Non vedo l'ora di vedere il mio vestito!
 --- !u!114 &1076411217
 MonoBehaviour:
@@ -2072,12 +2072,11 @@ MonoBehaviour:
   dialogue:
     name: ATTORE 1
     sentences:
-    - 'Ciao, sono l''Attore 1 dello Spettacolo Distopera!
+    - 'Ciao, io sono l''attrice protagonista dello spettacolo.
 
       Non vedo l''ora
       di salire sul palco...'
-    - "Ma prima ho bisogno del mio vestito di scena. \nIl mio personaggio \xE8 un
-      tipo ***descrizione***..."
+    - "Ma prima ho bisogno del mio vestito di scena. \nIl mio personaggio \xE8 Belle."
     - "Scegli il vestito che pi\xF9 mi si addice, a presto!"
 --- !u!114 &1730657825
 MonoBehaviour:

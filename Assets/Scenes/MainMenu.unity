@@ -28544,11 +28544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47f746e6f393cc44f9606f4da40f40b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loading: 0
-  Menu: 0
-  Game: 0
-  End: 0
+  loadingScreen: {fileID: 546913000}
+  canvasGroupLoading: {fileID: 546913002}
   currentScene: 0
+  menu: {fileID: 0}
+  tablet: {fileID: 0}
+  etichette: {fileID: 0}
   player: {fileID: 0}
 --- !u!1001 &2033226397
 PrefabInstance:
@@ -30755,4 +30756,3 @@ SceneRoots:
   - {fileID: 404371731}
   - {fileID: 546913001}
   - {fileID: 86151136}
-  - {fileID: 1672696485}

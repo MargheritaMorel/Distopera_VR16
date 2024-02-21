@@ -32699,16 +32699,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719687505}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47f746e6f393cc44f9606f4da40f40b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Loading: 0
-  Menu: 1
-  Game: 2
-  End: 3
+  loadingScreen: {fileID: 207579501}
   currentScene: 0
+  menu: {fileID: 2007148300}
+  tablet: {fileID: 528539967}
+  etichette: {fileID: 0}
   player: {fileID: 1183565170}
 --- !u!1 &1721319904
 GameObject:

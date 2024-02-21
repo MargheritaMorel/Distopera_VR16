@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class DoorTrigger : MonoBehaviour
 {
+    
     [SerializeField] private Door _door;
     [SerializeField] private bool _openOnEnter = true;
     [SerializeField] private bool _closeOnExit = true;
+    [SerializeField] AudioSource OpenDoorSound;
+    [SerializeField] AudioSource CloseDoorSound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,11 +23,13 @@ public class DoorTrigger : MonoBehaviour
 
         if (_door != null && _openOnEnter)
             _door.OpenDoor(doorRotation);
+            OpenDoorSound.Play();
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (_door != null && _closeOnExit)
             _door.CloseDoor();
+            CloseDoorSound.Play();
     }
 }

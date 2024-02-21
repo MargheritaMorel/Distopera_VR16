@@ -7,6 +7,7 @@ public class FarettoTurnOnButton : MonoBehaviour
 
     [SerializeField] private Button3D _turnLightButton;
     [SerializeField] private GameObject _faro;
+    [SerializeField] AudioSource LightSwitchSound;
     //public GameObject txtToDisplay;
 
     private FPSInteractionManager _fpscheck;
@@ -21,6 +22,7 @@ public class FarettoTurnOnButton : MonoBehaviour
     private void OnLightOpenButtonPressed()
     {
         _faro.SetActive(!_faro.activeSelf);
+        LightSwitchSound.Play();
     }
 
     /*private void OnTriggerEnter(Collider Other)

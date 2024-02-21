@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1367,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0891d227e7e4d644b6bf09bd17aeb2f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
       propertyPath: m_Name
       value: QuinteTende
@@ -8075,6 +8079,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0891d227e7e4d644b6bf09bd17aeb2f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
       propertyPath: m_Name
       value: QuinteTende (2)
@@ -12001,6 +12009,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0891d227e7e4d644b6bf09bd17aeb2f, type: 2}
     - target: {fileID: 919132149155446097, guid: ac5d50eccd9125c48813f815de3f1bab, type: 3}
       propertyPath: m_Name
       value: QuinteTende (1)
@@ -12517,12 +12529,16 @@ PrefabInstance:
       value: 0.06157103
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.037907504
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30.350845
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -31.542997
+      value: -31.709
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12560,6 +12576,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: de09c7a1cf08d774da06a43fd6b42984, type: 2}
     - target: {fileID: 919132149155446097, guid: 4122b7d91c4b9d2459b2029423dc16dc, type: 3}
       propertyPath: m_Name
       value: SiparioConCornice
@@ -20561,6 +20581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d76c6e306bdfe7c4593ee8a7a836161e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
       propertyPath: m_Name
       value: LampadaAmericana (1)
@@ -22487,6 +22511,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1807948217}
     m_Modifications:
+    - target: {fileID: -8834285235344309039, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
     - target: {fileID: -8679921383154817045, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -22543,6 +22571,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7437997374797161961, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
+    - target: {fileID: -5986470083997083796, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
     - target: {fileID: -5953199769714318784, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 16
@@ -22551,6 +22587,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: line_array (2)
       objectReference: {fileID: 0}
+    - target: {fileID: -2550506545502803375, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
+    - target: {fileID: -523956815993538338, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
+    - target: {fileID: 789218737155475442, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
     - target: {fileID: 919132149155446097, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
       propertyPath: m_Name
       value: Line Array
@@ -22559,6 +22607,18 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 6566043526966874565, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
+    - target: {fileID: 8478035330713808663, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
+    - target: {fileID: 8811987721996768789, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3f530f1cbe1cdf24ba6ab63010485f47, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3611959169726762133, guid: 1755c81cd3f4c0d4eaea7d736b310445, type: 3}
@@ -27075,6 +27135,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -39.59
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d76c6e306bdfe7c4593ee8a7a836161e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
       propertyPath: m_Name
       value: LampadaAmericana
@@ -30411,6 +30475,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d76c6e306bdfe7c4593ee8a7a836161e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
       propertyPath: m_Name
       value: LampadaAmericana (3)
@@ -35575,6 +35643,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -49.6
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d76c6e306bdfe7c4593ee8a7a836161e, type: 2}
     - target: {fileID: 919132149155446097, guid: 3fd0faade5972b84195968265c836bd4, type: 3}
       propertyPath: m_Name
       value: LampadaAmericana (2)

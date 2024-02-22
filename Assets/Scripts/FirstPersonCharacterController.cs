@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -17,6 +17,7 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     [SerializeField] private GameObject player;
     [SerializeField] private Transform initialPosition;
+
 
     private CharacterController _characterController;
     private float cameraXRotation = 0f;

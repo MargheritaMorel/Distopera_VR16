@@ -10,9 +10,6 @@ public class FarettoTurnOnButton : MonoBehaviour
     [SerializeField] AudioSource LightSwitchSound;
     //public GameObject txtToDisplay;
 
-    [SerializeField] private Tablet _tablet;
-    private bool _acceso = false;
-
     private FPSInteractionManager _fpscheck;
 
 
@@ -25,16 +22,6 @@ public class FarettoTurnOnButton : MonoBehaviour
     private void OnLightOpenButtonPressed()
     {
         _faro.SetActive(!_faro.activeSelf);
-        if (_acceso == false)
-        {
-            _acceso = true;
-            _tablet.luceAccesa++;
-        }
-        else { 
-            _acceso = false;
-            _tablet.luceAccesa--;
-        }
-        _tablet.CheckLuciAccese();
         LightSwitchSound.Play();
     }
 

@@ -19,7 +19,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject menu;
     public GameObject tablet;
-    public GameObject etichette;
+    public GameObject etichetta_1;
+    public GameObject etichetta_2;
+    public GameObject etichetta_3;
+    public GameObject etichetta_4;
+    public GameObject etichetta_5;
+    public GameObject etichetta_6;
+
 
     public GameObject player;
     
@@ -64,41 +70,21 @@ public class GameManager : MonoBehaviour
         //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
         if (currentScene.ToString() == "Theatre")
         {
-            player.GetComponent<FirstPersonCharacterController>().enabled = false;
+            player.GetComponent<FirstPersonCharacterController>().enabled = true;
         }
         
 
-
-        //Disabilita il movimento del player quando il menu è attivo
-        // if(menu.activeSelf == true)
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
-        // else
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = true;
-        // }
-
-        // //Disabilita il movimento del player quando il tablet è attivo
-        // if(tablet.activeSelf == true)
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
-        // else
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = true;
-        // }
-
-        // //Disabilita il movimento del player quando le etichette sono attive
-        // if (etichette.activeSelf == true)
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
-        // else
-        // {
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = true;
-        // }
-
+        //Disabilita il movimento del player quando il menu, il tablet o le etichette sono attive 
+        if(menu.activeSelf == true || tablet.activeSelf == true || etichetta_1.activeSelf == true
+        || etichetta_2.activeSelf == true || etichetta_3.activeSelf == true || etichetta_4.activeSelf == true 
+        || etichetta_5.activeSelf == true || etichetta_6.activeSelf == true)
+        {
+            player.GetComponent<FirstPersonCharacterController>().enabled = false;
+        }
+        else
+        {
+            player.GetComponent<FirstPersonCharacterController>().enabled = true;
+        }
         
     }
 

@@ -15,6 +15,9 @@ public class FirstPersonCharacterController : MonoBehaviour
     [SerializeField] private LayerMask _groundMask;
     [SerializeField] private float _jumpHeight = 3f;
 
+    [SerializeField] private Transform initialPosition;
+    [SerializeField] private GameObject player;
+
 
     private CharacterController _characterController;
     private float cameraXRotation = 0f;
@@ -23,6 +26,7 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     void Start()
     {
+        player.transform.position = initialPosition.position;
         _characterController = GetComponent<CharacterController>();
 
         Cursor.lockState = CursorLockMode.Locked;

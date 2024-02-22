@@ -20403,7 +20403,7 @@ Transform:
   m_GameObject: {fileID: 825547705}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 333, y: -22, z: 5}
+  m_LocalPosition: {x: 179, y: -22.9, z: 133.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31453,7 +31453,7 @@ GameObject:
   - component: {fileID: 1290467485}
   - component: {fileID: 1290467484}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasTabletUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42370,7 +42370,7 @@ MonoBehaviour:
   canvasGroupLoading: {fileID: 0}
   currentScene: 0
   menu: {fileID: 2007148300}
-  tablet: {fileID: 528539967}
+  tablet: {fileID: 1290467482}
   etichetta_1: {fileID: 329437697}
   etichetta_2: {fileID: 2074380032}
   etichetta_3: {fileID: 671026631}

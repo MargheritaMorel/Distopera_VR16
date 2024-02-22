@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public GameObject etichetta_4;
     public GameObject etichetta_5;
     public GameObject etichetta_6;
+    public GameObject dialoguePanel;
 
 
     public GameObject player;
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
         //Disabilita il movimento del player quando il menu, il tablet o le etichette sono attive 
         if(menu.activeSelf == true || tablet.activeSelf == true || etichetta_1.activeSelf == true
         || etichetta_2.activeSelf == true || etichetta_3.activeSelf == true || etichetta_4.activeSelf == true 
-        || etichetta_5.activeSelf == true || etichetta_6.activeSelf == true)
+        || etichetta_5.activeSelf == true || etichetta_6.activeSelf == true || dialoguePanel.activeSelf == true) 
         {
             player.GetComponent<FirstPersonCharacterController>().enabled = false;
         }

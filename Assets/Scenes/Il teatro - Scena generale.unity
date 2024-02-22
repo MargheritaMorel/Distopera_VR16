@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311924, g: 0.38073963, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1945,7 +1945,7 @@ AudioSource:
   m_GameObject: {fileID: 129373115}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2905264827461615332, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 5bbcdee7a17034ba2bb47a3c78f011da, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.395
@@ -3938,7 +3938,7 @@ MonoBehaviour:
   _openOnEnter: 1
   _closeOnExit: 1
   OpenDoorSound: {fileID: 1181195716}
-  CloseDoorSound: {fileID: 1107983646}
+  CloseDoorSound: {fileID: 0}
 --- !u!114 &220179393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4905,8 +4905,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: -0.004398087}
   m_LocalScale: {x: 0.7830188, y: 0.8407513, z: 0.826753}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 51888024}
+  m_Children: []
   m_Father: {fileID: 633354146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5751,6 +5750,7 @@ GameObject:
   m_Component:
   - component: {fileID: 276956918}
   - component: {fileID: 276956919}
+  - component: {fileID: 276956920}
   m_Layer: 5
   m_Name: MusicSlider
   m_TagString: Untagged
@@ -5824,13 +5824,38 @@ MonoBehaviour:
   m_FillRect: {fileID: 392147793}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 276956920}
+        m_TargetAssemblyTypeName: MixerController, Assembly-CSharp
+        m_MethodName: setVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &276956920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 276956917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f13685abee3864f7a8458160a9e0fb65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myAudioMixer: {fileID: 24100000, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
 --- !u!1 &284704165 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 204d315552ced0444a546e21bf5725b2, type: 3}
@@ -6649,7 +6674,7 @@ MonoBehaviour:
   _openOnEnter: 1
   _closeOnExit: 1
   OpenDoorSound: {fileID: 1181195716}
-  CloseDoorSound: {fileID: 1107983646}
+  CloseDoorSound: {fileID: 0}
 --- !u!114 &329854909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9120,7 +9145,7 @@ AudioSource:
   m_GameObject: {fileID: 448225149}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6970607689701980438, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1fca41d19db0f4cbf8dbccf2de890320, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -10066,7 +10091,7 @@ MonoBehaviour:
   _openOnEnter: 1
   _closeOnExit: 1
   OpenDoorSound: {fileID: 1181195716}
-  CloseDoorSound: {fileID: 1107983646}
+  CloseDoorSound: {fileID: 0}
 --- !u!114 &491428588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11393,7 +11418,7 @@ PrefabInstance:
     - target: {fileID: 149475517247514182, guid: c1a819e47b0589b4499b33a6023db4fb, type: 3}
       propertyPath: CloseDoorSound
       value: 
-      objectReference: {fileID: 1107983646}
+      objectReference: {fileID: 0}
     - target: {fileID: 3331781619871458226, guid: c1a819e47b0589b4499b33a6023db4fb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16894,7 +16919,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 651461649}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -19033,7 +19058,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 651461649}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -21935,7 +21960,7 @@ AudioSource:
   m_GameObject: {fileID: 955674067}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6970607689701980438, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 673b81642a111480d969dd4043a39506, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -22662,7 +22687,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1181195715}
-  - {fileID: 1107983645}
   - {fileID: 129373117}
   - {fileID: 1662568455}
   - {fileID: 1871315916}
@@ -26791,7 +26815,7 @@ AudioSource:
   m_GameObject: {fileID: 1181195714}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6970607689701980438, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3af35dc661035449cb28226875ac4d6b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -28559,7 +28583,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 651461649}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -30223,7 +30247,7 @@ MonoBehaviour:
   _openOnEnter: 1
   _closeOnExit: 1
   OpenDoorSound: {fileID: 1181195716}
-  CloseDoorSound: {fileID: 1107983646}
+  CloseDoorSound: {fileID: 0}
 --- !u!114 &1320680308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37208,7 +37232,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 651461649}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
         m_Mode: 1
@@ -37851,7 +37875,7 @@ AudioSource:
   m_GameObject: {fileID: 1662568454}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6970607689701980438, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9bcbb4e7054064c2cbc0d5cd0db6aaca, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -42108,7 +42132,7 @@ AudioSource:
   m_GameObject: {fileID: 1871315915}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -2905264827461615332, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 824a63d3d6f0b4459b9e304260a4e000, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -43697,7 +43721,7 @@ AudioSource:
   m_GameObject: {fileID: 1966100387}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6970607689701980438, guid: f914569c74e7d482fabec9a245fea4fc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 15f6c92770af049de9fcf77fc8075874, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -44525,6 +44549,7 @@ GameObject:
   - component: {fileID: 1987123943}
   - component: {fileID: 1987123945}
   - component: {fileID: 1987123944}
+  - component: {fileID: 1987123946}
   m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
@@ -44615,6 +44640,20 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
+--- !u!114 &1987123946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987123941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f0869e2674447899b20f0be68702ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myMixer: {fileID: 0}
+  musicSlider: {fileID: 0}
 --- !u!1 &1987275778
 GameObject:
   m_ObjectHideFlags: 0
@@ -45248,7 +45287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2007148301
 Transform:
   m_ObjectHideFlags: 0
@@ -45264,7 +45303,6 @@ Transform:
   m_Children:
   - {fileID: 1987123942}
   - {fileID: 1047251476}
-  - {fileID: 651461648}
   - {fileID: 955674068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -46377,7 +46415,7 @@ MonoBehaviour:
   _openOnEnter: 1
   _closeOnExit: 1
   OpenDoorSound: {fileID: 1181195716}
-  CloseDoorSound: {fileID: 1107983646}
+  CloseDoorSound: {fileID: 0}
 --- !u!114 &2094405271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47789,7 +47827,7 @@ PrefabInstance:
     - target: {fileID: 149475517247514182, guid: c1a819e47b0589b4499b33a6023db4fb, type: 3}
       propertyPath: CloseDoorSound
       value: 
-      objectReference: {fileID: 1107983646}
+      objectReference: {fileID: 0}
     - target: {fileID: 1350798655699179188, guid: c1a819e47b0589b4499b33a6023db4fb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -47964,3 +48002,4 @@ SceneRoots:
   - {fileID: 528539968}
   - {fileID: 980287427}
   - {fileID: 1599228086}
+  - {fileID: 50180290}

@@ -7,6 +7,7 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
+    [SerializeField] private Menu _menu;
 
     [SerializeField] private Image _target;
 
@@ -50,6 +51,14 @@ public class FPSInteractionManager : MonoBehaviour
                 _tablet.CloseCanvas();
             }
             else _tablet.OpenCanvas();
+        }
+        if (Input.GetKeyDown("m"))
+        {
+            if (_menu.isOpen)
+            {
+                _menu.CloseCanvas();
+            }
+            else _menu.OpenCanvas();
         }
 
         UpdateUITarget();

@@ -10,6 +10,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] private Toggle _toggle;
     [SerializeField] private TextMeshProUGUI _text;
     [SerializeField] private TextMeshProUGUI _text2;
+    [SerializeField] private TextMeshProUGUI _text3;
     [SerializeField] private Toggle _toggle2;
     [SerializeField] private Canvas _canvas;
 
@@ -79,6 +80,7 @@ public class Tablet : MonoBehaviour
             _text2.text = "TASK LUCI COMPLETATO 3/3";
             _toggle2.isOn = true;
             _canvasTask3.gameObject.SetActive(true);
+            _text3.gameObject.SetActive(true);
         }
 
         if (luceAccesa == 3) luciAccese = true;

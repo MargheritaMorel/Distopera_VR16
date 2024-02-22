@@ -10,6 +10,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     [SerializeField] private Image _target;
 
+    [SerializeField] private Canvas _openTablet;
+
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
 
@@ -21,6 +23,10 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private List<SnapPoint> snapPoints;
     [SerializeField] private float snapRange = 2f;
     private OggettoScena _oggettoScena = null;
+
+    private bool isTablet = false;
+    [SerializeField] private FirstPersonCharacterController _fpsInventory;
+    [SerializeField] private Tablet _tablet;
 
     void Start()
     {
@@ -36,6 +42,14 @@ public class FPSInteractionManager : MonoBehaviour
 
         if (_grabbedObject != null && Input.GetMouseButtonDown(0))
             Drop();
+
+        if (Input.GetKeyDown("t") && _tablet.isTaken == true) 
+        {
+            if (_tablet.isOpen) { 
+                _tablet.CloseCanvas();
+            }
+            else _tablet.OpenCanvas();
+        }
 
         UpdateUITarget();
 
@@ -66,11 +80,15 @@ public class FPSInteractionManager : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(1))
                 {
-                    _pointingGrabbable.Grab(gameObject);
-                    if (_pointingGrabbable.tag == "OggettoScena")
-                        GrabOggettoScena(_pointingGrabbable, _oggettoScena);
+                    if (_pointingGrabbable.tag == "Tablet" && _tablet.isTaken==false) Store(_pointingGrabbable);
                     else
-                        Grab(_pointingGrabbable);
+                    {
+                        _pointingGrabbable.Grab(gameObject);
+                        if (_pointingGrabbable.tag == "OggettoScena")
+                            GrabOggettoScena(_pointingGrabbable, _oggettoScena);
+                        else
+                            Grab(_pointingGrabbable);
+                    }
                 }
                     
             }
@@ -88,7 +106,8 @@ public class FPSInteractionManager : MonoBehaviour
         if (_pointingInteractable)
             _target.color = Color.green;
         else if (_pointingGrabbable)
-            _target.color = Color.yellow;
+            if (_pointingGrabbable.tag == "Tablet") _target.color = Color.blue;
+            else _target.color = Color.yellow;
         else
             _target.color = Color.red;
     }
@@ -124,12 +143,23 @@ public class FPSInteractionManager : MonoBehaviour
         Debug.DrawRay(_rayOrigin, _fpsCameraT.forward * _interactionDistance, Color.red);
     }
 
+    private void Store(Grabbable tablet)
+    {
+        tablet.transform.parent = _fpsInventory.transform;
+        tablet.gameObject.SetActive(false);
+        _tablet.isTaken=true;
+        
+        _openTablet.gameObject.SetActive(true); 
+        
+    }
+
     private void GrabOggettoScena(Grabbable grabbable, OggettoScena oggetto)
     {
         if (oggetto._isPlaced == true)
         {
             if (oggetto._snappoint.isUsed == true)
             {
+                _tablet.oggettoScenaPiazzato--;
                 oggetto._snappoint.isUsed = false;
                 oggetto._snappoint.gameObject.SetActive(true);
                 oggetto._snappoint = null;
@@ -150,7 +180,7 @@ public class FPSInteractionManager : MonoBehaviour
         {
             if (!snapPoint.isUsed)
             {
-                float currentDistance = Vector3.Distance(grabbable.transform.localPosition, snapPoint.transform.localPosition);
+                float currentDistance = Vector3.Distance(grabbable.transform.position, snapPoint.transform.position);
 
                 if (closestSnapPoint == null || currentDistance < closestDistance)
                 {
@@ -163,10 +193,12 @@ public class FPSInteractionManager : MonoBehaviour
         //snapRange è il valore entro il quale il drop risulta "corretto"
         if (closestSnapPoint != null && closestDistance <= snapRange)
         {
-            grabbable.transform.localPosition = closestSnapPoint.transform.localPosition;
+            grabbable.transform.position = closestSnapPoint.transform.position;
             oggetto._isPlaced = true;
             oggetto._snappoint = closestSnapPoint;
             oggetto._snappoint.isUsed = true;
+            _tablet.oggettoScenaPiazzato++;
+            _tablet.CheckOggettiScena();
             closestSnapPoint.gameObject.SetActive(false);
 
         }

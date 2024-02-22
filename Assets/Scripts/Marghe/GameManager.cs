@@ -50,25 +50,22 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 StartCoroutine(LoadScene("Theatre"));
-                currentScene = SceneLoader.Scene.Theatre;
             }
+            currentScene = SceneLoader.Scene.Theatre;
+
         }
 
+        //Carica la scena del menu  all'avvio del gioco
+        if (currentScene.ToString() == "Menu")
+        {
+            player.GetComponent<FirstPersonCharacterController>().enabled = false;
+        }
 
-
-        // //Carica la scena del menu  all'avvio del gioco
-        // if (currentScene.ToString() == "Menu")
-        // {
-        //     SceneLoader.Load(Loading);
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
-
-        // //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
-        // if (currentScene.ToString() == "Loading")
-        // {
-        //     SceneLoader.Load(Game);
-        //     player.GetComponent<FirstPersonCharacterController>().enabled = false;
-        // }
+        //Carica la scena del gioco durante la visualizzazione della schermata di caricamento
+        if (currentScene.ToString() == "Theatre")
+        {
+            player.GetComponent<FirstPersonCharacterController>().enabled = false;
+        }
         
 
 

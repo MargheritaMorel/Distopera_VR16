@@ -12,7 +12,7 @@ public class NPC : MonoBehaviour
     public bool isClicked = false;
 
     public UnityEvent evento;
-   // public UnityEvent evento1;
+    public UnityEvent evento1;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,9 +37,9 @@ public class NPC : MonoBehaviour
         }
         else
         {
-            //if (OnButtonClosed != null)
-          //      OnButtonClosed();
-           // evento1.Invoke();
+            if (OnButtonClosed != null)
+                OnButtonClosed();
+            evento1.Invoke();
             isClicked = false;
 
         }

@@ -31,6 +31,7 @@ public class DialogueManagerScript : MonoBehaviour
         }
 
         DisplayNextSentence();
+
     }
 
     public void DisplayNextSentence(){
@@ -58,5 +59,8 @@ public class DialogueManagerScript : MonoBehaviour
     }
 
 
-
+    // IEnumerator NextSentenceCoroutine(){
+    //     yield return new WaitForSeconds(3);
+    //     DisplayNextSentence();
+    // }
 }

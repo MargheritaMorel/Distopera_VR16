@@ -13,6 +13,8 @@ public class DialogueManagerScript : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
+
+    public Animator animator;
     [SerializeField] AudioSource TypingSound;
 
 
@@ -21,6 +23,8 @@ public class DialogueManagerScript : MonoBehaviour
     }
 
     public void StartDialogue(Dialogue dialogue){
+
+        animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
 
@@ -56,6 +60,7 @@ public class DialogueManagerScript : MonoBehaviour
 
     void EndDialogue(){
         Debug.Log("End of conversation.");
+        animator.SetBool("IsOpen", false);
     }
 
 

@@ -21,15 +21,17 @@ public class DoorTrigger : MonoBehaviour
 
         float doorRotation = dotResult > 0 ? 90f : -90f;
 
-        if (_door != null && _openOnEnter)
+        if (_door != null && _openOnEnter){
             _door.OpenDoor(doorRotation);
             OpenDoorSound.Play();
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (_door != null && _closeOnExit)
+        if (_door != null && _closeOnExit){
             _door.CloseDoor();
             CloseDoorSound.Play();
+        }
     }
 }

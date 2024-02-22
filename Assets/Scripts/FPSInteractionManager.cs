@@ -10,6 +10,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     [SerializeField] private Image _target;
 
+    [SerializeField] private Canvas _openTablet;
+
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
 
@@ -41,6 +43,14 @@ public class FPSInteractionManager : MonoBehaviour
         if (_grabbedObject != null && Input.GetMouseButtonDown(0))
             Drop();
 
+        if (Input.GetKeyDown("t") && _tablet.isTaken == true) 
+        {
+            if (_tablet.isOpen) { 
+                _tablet.CloseCanvas();
+            }
+            else _tablet.OpenCanvas();
+        }
+
         UpdateUITarget();
 
         if (_debugRay)
@@ -70,7 +80,7 @@ public class FPSInteractionManager : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(1))
                 {
-                    if (_pointingGrabbable.tag == "Tablet") Store(_pointingGrabbable);
+                    if (_pointingGrabbable.tag == "Tablet" && _tablet.isTaken==false) Store(_pointingGrabbable);
                     else
                     {
                         _pointingGrabbable.Grab(gameObject);
@@ -137,6 +147,10 @@ public class FPSInteractionManager : MonoBehaviour
     {
         tablet.transform.parent = _fpsInventory.transform;
         tablet.gameObject.SetActive(false);
+        _tablet.isTaken=true;
+        
+        _openTablet.gameObject.SetActive(true); 
+        
     }
 
     private void GrabOggettoScena(Grabbable grabbable, OggettoScena oggetto)

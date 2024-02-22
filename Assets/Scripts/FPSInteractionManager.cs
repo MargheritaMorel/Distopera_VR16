@@ -7,10 +7,12 @@ public class FPSInteractionManager : MonoBehaviour
     [SerializeField] private Transform _fpsCameraT;
     [SerializeField] private bool _debugRay;
     [SerializeField] private float _interactionDistance;
+    [SerializeField] private Menu _menu;
 
     [SerializeField] private Image _target;
 
-    [SerializeField] private Canvas _openTablet;
+
+    [SerializeField] private TestoTemporaneo _canvasTabletCompari;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -49,6 +51,14 @@ public class FPSInteractionManager : MonoBehaviour
                 _tablet.CloseCanvas();
             }
             else _tablet.OpenCanvas();
+        }
+        if (Input.GetKeyDown("m"))
+        {
+            if (_menu.isOpen)
+            {
+                _menu.CloseCanvas();
+            }
+            else _menu.OpenCanvas();
         }
 
         UpdateUITarget();
@@ -148,8 +158,8 @@ public class FPSInteractionManager : MonoBehaviour
         tablet.transform.parent = _fpsInventory.transform;
         tablet.gameObject.SetActive(false);
         _tablet.isTaken=true;
-        
-        _openTablet.gameObject.SetActive(true); 
+        _canvasTabletCompari.nowDisplay = true;
+        _canvasTabletCompari.OpenCanva();
         
     }
 

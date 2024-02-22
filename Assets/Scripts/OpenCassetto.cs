@@ -35,7 +35,7 @@ public class OpenCassetto : Interactable
         coroutineAllowed = false;
         if (!boxOpened)
         {
-            for (float i = 0f; i <= 1f; i += 0.1f)
+            for (float i = 0f; i <= 0.5f; i += 0.1f)
             {
                 transform.localPosition = new Vector3(transform.localPosition.x - 0.1f,
                     transform.localPosition.y,
@@ -46,7 +46,7 @@ public class OpenCassetto : Interactable
         }
         else
         {
-            for (float i = 1f; i >= 0f; i -= 0.1f)
+            for (float i = 0.5f; i >= 0f; i -= 0.1f)
             {
                 transform.localPosition = new Vector3(transform.localPosition.x + 0.1f,
                     transform.localPosition.y,

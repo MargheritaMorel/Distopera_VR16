@@ -12979,6 +12979,7 @@ GameObject:
   - component: {fileID: 543642038}
   - component: {fileID: 543642037}
   - component: {fileID: 543642036}
+  - component: {fileID: 543642039}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -13069,6 +13070,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &543642039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543642034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207a79f4e1d8a5a45accbb8cb25a9aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeAmount: 5
+  currentTime: 0
+  nowDisplay: 0
+  _testoAscomparsa: {fileID: 543642038}
 --- !u!1 &547260876
 GameObject:
   m_ObjectHideFlags: 0
@@ -30791,6 +30808,10 @@ PrefabInstance:
       propertyPath: _fpsInventory
       value: 
       objectReference: {fileID: 1183565173}
+    - target: {fileID: 114118422040144828, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
+      propertyPath: _canvasTabletCompari
+      value: 
+      objectReference: {fileID: 543642039}
     - target: {fileID: 114118422040144828, guid: 55e3225810887d5499f5bad81cc5a56e, type: 3}
       propertyPath: _interactionDistance
       value: 20

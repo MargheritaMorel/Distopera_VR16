@@ -4,33 +4,46 @@ using UnityEngine;
 
 public class TestoTemporaneo : MonoBehaviour
 {
-    public float TimeAmount;
+   public float TimeAmount;
     public float currentTime;
+    public bool nowDisplay = false;
     [SerializeField] private Canvas _testoAscomparsa;
 
     // Start is called before the first frame update
-    void Start()
+   void Start()
     {
         currentTime = TimeAmount;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime -= Time.deltaTime;
-
-        if (currentTime <= 0)
+        if (nowDisplay == true)
         {
-            if (_testoAscomparsa.isActiveAndEnabled)
+            currentTime -= Time.deltaTime;
+
+            if (currentTime <= 0)
             {
-               
-                _testoAscomparsa.gameObject.SetActive(false);
+                if (_testoAscomparsa.gameObject.activeSelf)
+                {
+                    _testoAscomparsa.gameObject.SetActive(false);
+                    nowDisplay = false;
+                }
+                else
+                {
+                    _testoAscomparsa.gameObject.SetActive(true);
+                }
+                currentTime = TimeAmount;
             }
-            else
-            {
-                _testoAscomparsa.gameObject.SetActive(true);
-            }
-            currentTime = TimeAmount;
+
+        }
+    }
+    public void OpenCanva()
+    {
+        if(nowDisplay== true)
+        {
+            _testoAscomparsa.gameObject.SetActive(true);
         }
     }
 }

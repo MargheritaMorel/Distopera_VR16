@@ -10,7 +10,8 @@ public class FPSInteractionManager : MonoBehaviour
 
     [SerializeField] private Image _target;
 
-    [SerializeField] private Canvas _openTablet;
+
+    [SerializeField] private TestoTemporaneo _canvasTabletCompari;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -148,8 +149,8 @@ public class FPSInteractionManager : MonoBehaviour
         tablet.transform.parent = _fpsInventory.transform;
         tablet.gameObject.SetActive(false);
         _tablet.isTaken=true;
-        
-        _openTablet.gameObject.SetActive(true); 
+        _canvasTabletCompari.nowDisplay = true;
+        _canvasTabletCompari.OpenCanva();
         
     }
 

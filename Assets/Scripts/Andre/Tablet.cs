@@ -8,15 +8,19 @@ public class Tablet : MonoBehaviour
 {
     [SerializeField] private GameObject _tablet;
     [SerializeField] private Toggle _toggle;
-    [SerializeField] private TextMeshProUGUI _text;
-    [SerializeField] private TextMeshProUGUI _text2;
-    [SerializeField] private TextMeshProUGUI _text3;
+    [SerializeField] private TextMeshProUGUI _textTask1;
+    [SerializeField] private TextMeshProUGUI _textTask2;
+    [SerializeField] private TextMeshProUGUI _textTask3;
     [SerializeField] private Toggle _toggle2;
-    [SerializeField] private Canvas _canvas;
+    [SerializeField] private Canvas _canvasTabletUI;
+
+    [SerializeField] private Canvas _canvasTask1;
 
     [SerializeField] private Canvas _canvasTask2;
 
     [SerializeField] private Canvas _canvasTask3;
+
+
 
     public bool isOpen = false;
     public bool isTaken = false;
@@ -38,18 +42,18 @@ public class Tablet : MonoBehaviour
     public void CheckOggettiScena()
     {
         if(oggettoScenaPiazzato == 1){
-            _text.text = "Task SCENOGRAFIA 1/4";
+            _textTask1.text = "Task SCENOGRAFIA 1/4";
         }
         if(oggettoScenaPiazzato == 2){
-            _text.text = "Task SCENOGRAFIA 2/4";
+            _textTask1.text = "Task SCENOGRAFIA 2/4";
         }
         if(oggettoScenaPiazzato == 3){
-            _text.text = "Task SCENOGRAFIA 3/4";
+            _textTask1.text = "Task SCENOGRAFIA 3/4";
         }
         if (oggettoScenaPiazzato == 4)
         {
             oggettiCompleto = true;
-             _text.text = "TASK SCENOGRAFIA COMPLETATO 4/4";
+             _textTask1.text = "TASK SCENOGRAFIA COMPLETATO 4/4";
             _toggle.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
         }
@@ -57,30 +61,34 @@ public class Tablet : MonoBehaviour
 
     public void OpenCanvas()
     {
-        _canvas.gameObject.SetActive(true);
+        _canvasTabletUI.gameObject.SetActive(true);
         isOpen = true;
         
     }
 
+    public void OpenCanvasTask1(){
+        _canvasTask1.gameObject.SetActive(true);
+    }
+
     public void CloseCanvas()
     {
-        _canvas.gameObject.SetActive(false);
+        _canvasTabletUI.gameObject.SetActive(false);
         isOpen = false;
     }
 
     public void CheckLuciAccese()
     {   
         if(luceAccesa == 1){
-            _text2.text = "Task LUCI 1/3";
+            _textTask2.text = "Task LUCI 1/3";
         }
         if(luceAccesa == 2){
-            _text2.text = "Task LUCI 2/3";
+            _textTask2.text = "Task LUCI 2/3";
         }
         if(luceAccesa == 3){
-            _text2.text = "TASK LUCI COMPLETATO 3/3";
+            _textTask2.text = "TASK LUCI COMPLETATO 3/3";
             _toggle2.isOn = true;
             _canvasTask3.gameObject.SetActive(true);
-            _text3.gameObject.SetActive(true);
+            _textTask3.gameObject.SetActive(true);
         }
 
         if (luceAccesa == 3) luciAccese = true;
@@ -88,6 +96,6 @@ public class Tablet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+    
     }
 }

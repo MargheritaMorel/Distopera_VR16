@@ -11,8 +11,10 @@ public class FPSInteractionManager : MonoBehaviour
 
     [SerializeField] private Image _target;
 
+    private int firstTimeVisualTabletUI = 0;
 
-    [SerializeField] private TestoTemporaneo _canvasTabletCompari;
+
+   // [SerializeField] private TestoTemporaneo _canvasTabletCompari;
 
     private Interactable _pointingInteractable;
     private Grabbable _pointingGrabbable;
@@ -47,9 +49,18 @@ public class FPSInteractionManager : MonoBehaviour
 
         if (Input.GetKeyDown("t") && _tablet.isTaken == true) 
         {
-            if (_tablet.isOpen) { 
+            if (_tablet.isOpen && firstTimeVisualTabletUI==0) { 
+                Debug.Log("volte successive tablet visualizzato");
                 _tablet.CloseCanvas();
             }
+
+            else if (_tablet.isOpen && firstTimeVisualTabletUI==1) { 
+                Debug.Log("prima volta tablet visualizzato");
+                _tablet.CloseCanvas();
+                _tablet.OpenCanvasTask1();
+                firstTimeVisualTabletUI = 0;
+            }
+            
             else _tablet.OpenCanvas();
         }
         if (Input.GetKeyDown("m"))
@@ -158,9 +169,10 @@ public class FPSInteractionManager : MonoBehaviour
         tablet.transform.parent = _fpsInventory.transform;
         tablet.gameObject.SetActive(false);
         _tablet.isTaken=true;
-        _canvasTabletCompari.nowDisplay = true;
-        _canvasTabletCompari.OpenCanva();
-        
+        //_canvasTabletCompari.nowDisplay = true;
+       // _canvasTabletCompari.OpenCanva();
+        _tablet.OpenCanvas();
+        firstTimeVisualTabletUI = 1;
     }
 
     private void GrabOggettoScena(Grabbable grabbable, OggettoScena oggetto)

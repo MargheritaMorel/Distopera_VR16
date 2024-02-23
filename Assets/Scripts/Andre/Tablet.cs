@@ -9,7 +9,9 @@ public class Tablet : MonoBehaviour
     [SerializeField] private GameObject _tablet;
     [SerializeField] private Toggle _toggle;
     [SerializeField] private TextMeshProUGUI _textTask1;
+    [SerializeField] private Image panelTask1;
     [SerializeField] private TextMeshProUGUI _textTask2;
+    [SerializeField] private Image panelTask2;
     [SerializeField] private TextMeshProUGUI _textTask3;
     [SerializeField] private Toggle _toggle2;
     [SerializeField] private Canvas _canvasTabletUI;
@@ -54,6 +56,8 @@ public class Tablet : MonoBehaviour
         {
             oggettiCompleto = true;
              _textTask1.text = "TASK SCENOGRAFIA COMPLETATO 4/4";
+             panelTask1 = panelTask1.GetComponent<Image>();
+             panelTask1.color = UnityEngine.Color.green;
             _toggle.isOn = true;
             _canvasTask2.gameObject.SetActive(true);
         }
@@ -86,6 +90,8 @@ public class Tablet : MonoBehaviour
         }
         if(luceAccesa == 3){
             _textTask2.text = "TASK LUCI COMPLETATO 3/3";
+             panelTask2 = panelTask2.GetComponent<Image>();
+             panelTask2.color = UnityEngine.Color.green;
             _toggle2.isOn = true;
             _canvasTask3.gameObject.SetActive(true);
             _textTask3.gameObject.SetActive(true);

@@ -38908,7 +38908,9 @@ MonoBehaviour:
   _tablet: {fileID: 1482228652}
   _toggle: {fileID: 1709188516}
   _textTask1: {fileID: 1106070185}
+  panelTask1: {fileID: 2016368910}
   _textTask2: {fileID: 393326889}
+  panelTask2: {fileID: 1416982253}
   _textTask3: {fileID: 303324314}
   _toggle2: {fileID: 984193870}
   _canvasTabletUI: {fileID: 1290467486}
